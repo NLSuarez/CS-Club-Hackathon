@@ -44,7 +44,6 @@ if (isset($_POST['ajaxrequest'])) { $ajaxrequest = $_POST['ajaxrequest']; } else
     'mypasswordconf' => $mypasswordconf,
     'mycomments' => $mycomments,
     'reference' => $reference,
-    'favoritemusic' => $favoritemusic,
     'requesttype' => $requesttype
   );
 
@@ -75,7 +74,6 @@ if (isset($_POST['ajaxrequest'])) { $ajaxrequest = $_POST['ajaxrequest']; } else
 		  '".$salted."',
 		  '".$mycomments."',
 		  '".$reference."',
-		  '".implode(', ', $favoritemusic)."',
 		  '".$requesttype."'
 		)";
 
