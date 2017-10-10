@@ -1,0 +1,15 @@
+body {
+	background-color: #f1f1f1;
+}
+
+.container {
+	background-color: white;
+}
+
+.well {
+	padding: 10px !important;
+}
+
+#main-content{
+	margin-top: 35px !important;		
+}
