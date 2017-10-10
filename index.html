@@ -3,8 +3,43 @@
 	<title>CSUStan Hackaton</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 	<link rel="stylesheet" href="media/styles/font-awesome-4.7.0/css/font-awesome.min.css">
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 	<script src="scripts/jquery-3.2.1.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="scripts/registration.js"></script>
+	<link rel="stylesheet" href="media/styles/default.css">
 </head>
 <body>
+	<div class="container">
+	<div class="well">
+		<div class="col-xs-12">
+			<a class="btn btn-primary" data-toggle="collapse" href="#register" aria-expanded="false" aria-controls="register">
+    			Register
+  			</a>
+  			<div id="register" class="collapse">
+		    	<form class="form-horizontal" action="./register.php" method="POST">
+		    		<div class="form-group">
+		    			<label for="myWarriorID">Warrior ID</label>
+		    			<input type="text" name="myWarriorID" id="myWarriorID" class="form-control" placeholder="Enter Warrior ID">
+		    		</div>
+		    		<div class="form-group">
+					   <label for="myEmail">Email address</label>
+					   <input type="email" class="form-control" id="myEmail" name="myEmail" placeholder="Enter email">
+					   <!--
+					   	Something to potentially add later. Will require this attribute in the input to appear properly: aria-describedby="emailHelp"
+					   <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+					   -->
+					</div>
+					<div class="form-group">
+		    			<label for="myFirstName">Warrior ID</label>
+		    			<input type="text" name="myFirstName" id="myFirstName" class="form-control" placeholder="Enter your first name">
+		    		</div>
+		    		<div class="form-group">
+		    			<label for="myLastName">Warrior ID</label>
+		    			<input type="text" name="myLastName" id="myLastName" class="form-control" placeholder="Enter your last name">
+		    		</div>
+		    	</form>
+		  </div>
+		</div>
+	</div>
+</div>
 </body>
