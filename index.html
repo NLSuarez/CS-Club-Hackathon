@@ -13,36 +13,116 @@
 </head>
 <body>
 	<div class="container" id="main-content">
-	<div class="well">
-		<div class="col-xs-12">
-			<a class="btn btn-primary" data-toggle="collapse" href="#register" aria-expanded="false" aria-controls="register">
-    			Register
-  			</a>
-  			<div id="register" class="collapse">
-		    	<form class="form-horizontal" action="./register.php" method="POST">
-		    		<div class="form-group">
-		    			<label for="myWarriorID">Warrior ID</label>
-		    			<input type="text" name="myWarriorID" id="myWarriorID" class="form-control" placeholder="Enter Warrior ID">
-		    		</div>
-		    		<div class="form-group">
-					   <label for="myEmail">Email address</label>
-					   <input type="email" class="form-control" id="myEmail" name="myEmail" placeholder="Enter email">
-					   <!--
-					   	Something to potentially add later. Will require this attribute in the input to appear properly: aria-describedby="emailHelp"
-					   <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-					   -->
-					</div>
-					<div class="form-group">
-		    			<label for="myFirstName">Warrior ID</label>
-		    			<input type="text" name="myFirstName" id="myFirstName" class="form-control" placeholder="Enter your first name">
-		    		</div>
-		    		<div class="form-group">
-		    			<label for="myLastName">Warrior ID</label>
-		    			<input type="text" name="myLastName" id="myLastName" class="form-control" placeholder="Enter your last name">
-		    		</div>
-		    	</form>
-		  </div>
+		<img src="media\images\logo_sizes\ms-icon-310x310.png" class="mx-auto d-block" width="240">
+		
+		<div class="row justify-content-center">
+			<h1>CS Club Hackathon</h1>
 		</div>
+		
+		<div class="well">
+			<div class="col-xs-12">
+				<a class="btn btn-primary" data-toggle="collapse" href="#register" aria-expanded="false" aria-controls="register">
+					Register
+				</a>
+				<div id="register" class="collapse">
+					<form class="form-horizontal" action="./register.php" method="POST">
+						<div class="form-group">
+							<label for="myWarriorID">Warrior ID</label>
+							<input type="text" name="myWarriorID" id="myWarriorID" class="form-control" placeholder="Enter Warrior ID">
+						</div>
+						<div class="form-group">
+						   <label for="myEmail">Email address</label>
+						   <input type="email" class="form-control" id="myEmail" name="myEmail" placeholder="Enter email">
+						   <!--
+							Something to potentially add later. Will require this attribute in the input to appear properly: aria-describedby="emailHelp"
+						   <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+						   -->
+						</div>
+						<div class="form-group">
+							<label for="myFirstName">Warrior ID</label>
+							<input type="text" name="myFirstName" id="myFirstName" class="form-control" placeholder="Enter your first name">
+						</div>
+						<div class="form-group">
+							<label for="myLastName">Warrior ID</label>
+							<input type="text" name="myLastName" id="myLastName" class="form-control" placeholder="Enter your last name">
+						</div>
+					</form>
+			  </div>
+			</div>
+		</div>
+		
+		<hr/>
+		
+		<div class="row">
+			<h3 class="col-xs-4">Frequently Asked Questions</h3>
+		</div>
+		<div id="accordion" role="tablist">
+			<div class="card">
+				<div class="card-header" role="tab" id="headingOne">
+					<h5 class="mb-0">
+						<a class="collapsed" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+							A Question that is Frequently Asked
+						</a>
+					</h5>
+				</div>
+				<div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+					<div class="card-body">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</div>
+				</div>
+			</div>
+			
+			<div class="card">
+				<div class="card-header" role="tab" id="headingTwo">
+					<h5 class="mb-0">
+						<a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+							Another Question that is Frequently Asked
+						</a>
+					</h5>
+				</div>
+				<div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+					<div class="card-body">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</div>
+				</div>
+			</div>
+			
+			<div class="card">
+				<div class="card-header" role="tab" id="headingThree">
+					<h5 class="mb-0">
+						<a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+							A final Question that is Frequently Asked
+						</a>
+					</h5>
+				</div>
+				<div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+					<div class="card-body">
+						You were expecting lorem ipsum text <br/><br/>But it was me, Dio!
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<hr/>
+			
+		<div class="row">
+			<h3>Our Sponsors</h3>
+		</div>
+		
+		<div class="row justify-content-center">
+			<a class="col-xs-4" href="https://github.com/Ssuarez0/CS-Club-Hackathon">
+				<img src="media\images\sponsors\placeholder.jpg" alt="placeholder text" width="120">
+			</a>
+			<a class="col-xs-4" href="https://github.com/Ssuarez0/CS-Club-Hackathon">
+				<img src="media\images\sponsors\placeholder.jpg" alt="placeholder text" width="120">
+			</a>
+			<a class="col-xs-4" href="https://github.com/Ssuarez0/CS-Club-Hackathon">
+				<img src="media\images\sponsors\placeholder.jpg" alt="placeholder text" width="120">
+			</a>
+		</div>
+		
 	</div>
-</div>
+	<footer>
+		<p class="col-xs-4">Copyright &copy; 2017 CSU Stan CS Club
+	</footer>
 </body>
