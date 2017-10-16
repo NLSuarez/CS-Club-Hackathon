@@ -1,7 +1,9 @@
 <?php
-if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action']))):
+ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action']))):
 if (isset($_POST['myname'])) { $myname = $_POST['myname']; } else { $myname = ''; }
+if (isset($_POST['myWarriorID'])) { $myWarriorID = $_POST['myWarriorID']; } else { $myWarriorID =''; }
 if (isset($_POST['myEmail'])) { $myEmail = $_POST['myEmail']; } else { $myEmail = ''; }
+if (isset($_POST['myComments'])) { $myComments = $_POST['myComments']; } else {$myComments =''; }
 if (isset($_POST['reference'])) { $reference = $_POST['reference']; } else { $reference = ''; }
 if (isset($_POST['requesttype'])) { $requesttype = $_POST['requesttype']; } else { $requesttype = ''; }
 if (isset($_POST['ajaxrequest'])) { $ajaxrequest = $_POST['ajaxrequest']; } else { $ajaxrequest = ''; }
@@ -14,13 +16,18 @@ if (isset($_POST['ajaxrequest'])) { $ajaxrequest = $_POST['ajaxrequest']; } else
 		$err_email = '<div class="error">Please input an email</div>';
 		if ( $ajaxrequest ) { echo "<script>$('#myEmail').after('<div class=\"error\">Please input an email</div>');</script>"; }
 		$formerrors = true;
-	endif; //input field empty
-
+	endif;
+	 //input field empty
 	if(!filter_var($myEmail, FILTER_VALIDATE_EMAIL)) 
         $err_email = '<div class="error">Please input a valid email address</div>';
 		if ( $ajaxrequest ) { echo "<script>$('#myEmail').after('<div class=\"error\">Please input a valid email address</div>');</script>"; }
 		$formerrors = true;// invalid address
     endif;
+
+    if ( !(preg_match('00[0-9]{7}', $myWarriorID)) ) :
+    		$err_patternmatch = '<div class="error">Sorry, you must input a valid Warrior ID</div>';
+		$formerrors = true;
+	endif; //  doesn't match  
 
     
 	if ( !(preg_match('/[A-Za-z]+, [A-Za-z]+/', $myname)) ) :
@@ -30,6 +37,7 @@ if (isset($_POST['ajaxrequest'])) { $ajaxrequest = $_POST['ajaxrequest']; } else
   $formdata = array (
     'myname' => $myname,
     'myEmail' => $myEmail,
+    'myWarriorID' => $myWarriorID,
     'reference' => $reference,
     'requesttype' => $requesttype
   );
@@ -40,8 +48,8 @@ if (isset($_POST['ajaxrequest'])) { $ajaxrequest = $_POST['ajaxrequest']; } else
 		  forminfo_id,
 		  forminfo_ts,
 		  myname,
+		  myWarriorID,
 		  myEmail,
-		  mycomments,
 		  reference,
 		  requesttype
 		) 
@@ -49,6 +57,7 @@ if (isset($_POST['ajaxrequest'])) { $ajaxrequest = $_POST['ajaxrequest']; } else
 		  '',
 		  '".$myname."',
 		  '".$myEmail."',
+		  '".$myWarriorID."',
 		  '".$reference."',
 		  '".$requesttype."'
 		)";
