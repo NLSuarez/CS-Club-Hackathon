@@ -27,13 +27,14 @@ if (isset($_POST['ajaxrequest'])) { $ajaxrequest = $_POST['ajaxrequest']; } else
     if ( !(preg_match('00[0-9]{7}', $myWarriorID)) ) :
     		$err_patternmatch = '<div class="error">Sorry, you must input a valid Warrior ID</div>';
 		$formerrors = true;
-	endif; //  doesn't match  
+	endif; // WarriorID doesn't match  
 
     
 	if ( !(preg_match('/[A-Za-z]+, [A-Za-z]+/', $myname)) ) :
 		$err_patternmatch = '<div class="error">Sorry, the name must be in the format: Last, First</div>';
 		$formerrors = true;
 	endif; // pattern doesn't match
+  
   $formdata = array (
     'myname' => $myname,
     'myEmail' => $myEmail,
