@@ -4,7 +4,8 @@
 include 'info.php';
 
 if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action']))):
-if (isset($_POST['myname'])) { $myname = $_POST['myname']; } else { $myname = ''; }
+if (isset($_POST['fname'])) { $fname = $_POST['fname']; } else { $fname = ''; }
+if (isset($_POST['lname'])) { $lname = $_POST['lname']; } else { $lname = ''; }
 if (isset($_POST['myWarriorID'])) { $myWarriorID = $_POST['myWarriorID']; } else { $myWarriorID =''; }
 if (isset($_POST['myEmail'])) { $myEmail = $_POST['myEmail']; } else { $myEmail = ''; }
 if (isset($_POST['myComments'])) { $myComments = $_POST['myComments']; } else {$myComments =''; }
@@ -12,8 +13,8 @@ if (isset($_POST['reference'])) { $reference = $_POST['reference']; } else { $re
 if (isset($_POST['requesttype'])) { $requesttype = $_POST['requesttype']; } else { $requesttype = ''; }
 if (isset($_POST['ajaxrequest'])) { $ajaxrequest = $_POST['ajaxrequest']; } else { $ajaxrequest = ''; }
 	$formerrors = false;
-	if ($myname === '') :
-		$err_myname = '<div class="error">Sorry, your name is a required field</div>';
+	if ($fname === '' || $lname === '') :
+		$err_fname = '<div class="error">Sorry, you must input your full name</div>';
 		$formerrors = true;
 	endif; // input field empty
 	if ($myEmail === ''):
@@ -34,25 +35,33 @@ if (isset($_POST['ajaxrequest'])) { $ajaxrequest = $_POST['ajaxrequest']; } else
 	endif; // WarriorID doesn't match  
 
     
-	if ( !(preg_match('/[A-Za-z]+, [A-Za-z]+/', $myname)) ) :
-		$err_patternmatch = '<div class="error">Sorry, the name must be in the format: Last, First</div>';
+	if ( !(preg_match('/[A-Za-z]+/', $fname)) ) :
+		$err_patternmatch = '<div class="error">Error: Invalid input in First Name field</div>';
+		$formerrors = true;
+	endif; // pattern doesn't match
+
+	if ( !(preg_match('/[A-Za-z]+/', $lname)) ) :
+		$err_patternmatch = '<div class="error">Error: Invalid input in Last Name field</div>';
 		$formerrors = true;
 	endif; // pattern doesn't match
   
   $formdata = array (
-    'myname' => $myname,
+    'fname' => $fname,
+    'lname' => $lname,
     'myEmail' => $myEmail,
     'myWarriorID' => $myWarriorID,
     'reference' => $reference,
     'requesttype' => $requesttype
   );
+
 	if (!($formerrors)) :
 		include("log_formdb.php");
 		$forminfolink = mysqli_connect($host, $user, $password, $dbname);
 		$forminfoquery = "INSERT INTO form_info (
 		  forminfo_id,
 		  forminfo_ts,
-		  myname,
+		  fname,
+		  lname,
 		  myWarriorID,
 		  myEmail,
 		  reference,
@@ -60,7 +69,8 @@ if (isset($_POST['ajaxrequest'])) { $ajaxrequest = $_POST['ajaxrequest']; } else
 		) 
 		VALUES (
 		  '',
-		  '".$myname."',
+		  '".$fname."',
+		  '".$lname."',
 		  '".$myEmail."',
 		  '".$myWarriorID."',
 		  '".$reference."',
@@ -82,3 +92,4 @@ if (isset($_POST['ajaxrequest'])) { $ajaxrequest = $_POST['ajaxrequest']; } else
 endif;
  
 ?>
+
