@@ -1,5 +1,9 @@
 <?php
- if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action']))):
+
+//Line for the live server. Comment out if testing on local setup.
+include 'info.php';
+
+if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action']))):
 if (isset($_POST['myname'])) { $myname = $_POST['myname']; } else { $myname = ''; }
 if (isset($_POST['myWarriorID'])) { $myWarriorID = $_POST['myWarriorID']; } else { $myWarriorID =''; }
 if (isset($_POST['myEmail'])) { $myEmail = $_POST['myEmail']; } else { $myEmail = ''; }
