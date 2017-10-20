@@ -29,7 +29,7 @@ if (isset($_POST['ajaxrequest'])) { $ajaxrequest = $_POST['ajaxrequest']; } else
 		$formerrors = true;// invalid address
     endif;
 
-    if ( !(preg_match('00[0-9]{7}', $myWarriorID)) ) :
+    if ( !(preg_match('00[0-9]{9}', $myWarriorID)) ) :
     		$err_patternmatch = '<div class="error">Sorry, you must input a valid Warrior ID</div>';
 		$formerrors = true;
 	endif; // WarriorID doesn't match  
