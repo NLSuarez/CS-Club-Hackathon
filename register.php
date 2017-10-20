@@ -3,7 +3,7 @@
 //Line for the live server. Comment out if testing on local setup.
 include 'info.php';
 
-if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action']))):
+ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action']))):
 if (isset($_POST['fname'])) { $fname = $_POST['fname']; } else { $fname = ''; }
 if (isset($_POST['lname'])) { $lname = $_POST['lname']; } else { $lname = ''; }
 if (isset($_POST['myWarriorID'])) { $myWarriorID = $_POST['myWarriorID']; } else { $myWarriorID =''; }
@@ -58,23 +58,16 @@ if (isset($_POST['ajaxrequest'])) { $ajaxrequest = $_POST['ajaxrequest']; } else
 		include("log_formdb.php");
 		$forminfolink = mysqli_connect($host, $user, $password, $dbname);
 		$forminfoquery = "INSERT INTO form_info (
-		  forminfo_id,
-		  forminfo_ts,
 		  fname,
 		  lname,
 		  myWarriorID,
-		  myEmail,
-		  reference,
-		  requesttype
+		  myEmail
 		) 
 		VALUES (
-		  '',
 		  '".$fname."',
 		  '".$lname."',
 		  '".$myEmail."',
-		  '".$myWarriorID."',
-		  '".$reference."',
-		  '".$requesttype."'
+		  '".$myWarriorID."'
 		)";
 		if ($forminforesult = mysqli_query($forminfolink, $forminfoquery)):
 		  $msg = "Your form data has been processed. Thanks.";
