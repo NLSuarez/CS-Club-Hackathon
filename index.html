@@ -14,34 +14,19 @@
 <body>
 	<div class="container" id="main-content">
 		<div class="row justify-content-center">
-			<div class="col-xs-12">
-				<img src="media\images\logo_sizes\ms-icon-310x310.png" class="img-responsive">
-			</div>
+			<img src="media\images\logo_sizes\ms-icon-310x310.png" class="img-responsive">
 		</div>
 		
-		<div class="row justify-content-center">
-			<div class="col-xs-12">
-				<h1>CS Club Hackathon</h1>
-			</div>
+		<div class="row">
+			<h1 class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">CS Club Hackathon</h1>
 		</div>
 		
 		<div class="well">
-			<div class="row">
-				<div class="col-xs-12">
-					<p><strong>Welcome to CSU Stanilaus' Hackathon registration page!</strong></p>
-					<p>This is an event hosted by the campus's very own Computer Science Club. If you would like to participate,
-						please click that registration button below and fill out the necessary information. The event itself will be 
-						hosted on -date- in -location- and we hope you will join us for some fun!</p>
-						<p>
-							If you have any questions, please see the FAQs below for more information.
-						</p>
-				</div>
-			</div>
 			<div class="col-xs-12">
 				<a class="btn btn-primary" data-toggle="collapse" href="#register" aria-expanded="false" aria-controls="register">
 					Register
 				</a>
-				<div id="register" class="collapse">
+				<div id="register" class="collapse mt-3">
 					<form class="form-horizontal" action="./register.php" method="POST" id="registration-form">
 						<div class="form-group">
 							<label for="myWarriorID">Warrior ID</label>
@@ -74,109 +59,52 @@
 		<hr/>
 		
 		<div class="row">
-			<h3 class="col-xs-4">Frequently Asked Questions</h3>
+			<h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Frequently Asked Questions</h3>
 		</div>
-		<div id="accordion" role="tablist">
-			<div class="card">
-				<div class="card-header" role="tab" id="headingOne">
-					<h5 class="mb-0">
-						<a class="collapsed" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-							What is a Hackathon?
-						</a>
-					</h5>
-				</div>
-				<div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
-					<div class="card-body">
-						A hackathon is usually a 10-36-hour event where developers, companies, teachers, and all kinds of people from various backgrounds come and compete in a Software/Hardware competition. 
-
-						Typically, teams of four are formed and they try to develop an application, website, Arduino project, robotics, or even just to go learn.
-
-						The grand prizes usually range from a few thousand dollars, micro controllers, companies investing in ideas, to even interviews at software companies.
-
-						Many companies go to hackathons to simply see the local talent and recruit software developers, graphic designers, etc. 
-
-						Yes, it is called a “Hack”-a-thon, but it does not have to do with Computer Hacking. They call it a hackathon because people go to hack something together.
-
-						Much like making a Frankenstein project or coding up something so horrible that you are even surprised that it works.
+		<div class="row ml-1">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="accordion" role="tablist">
+				<div class="card">
+					<div class="card-header" role="tab" id="headingOne">
+						<h5 class="mb-0">
+							<a class="collapsed" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+								A Question that is Frequently Asked
+							</a>
+						</h5>
+					</div>
+					<div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+						<div class="card-body">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</div>
 					</div>
 				</div>
-			</div>
-			
-			<div class="card">
-				<div class="card-header" role="tab" id="headingTwo">
-					<h5 class="mb-0">
-						<a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-							What if I am new to programming or I am not even a coder?
-						</a>
-					</h5>
-				</div>
-				<div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
-					<div class="card-body">
-						You should still definitely go! A lot of employers look for CS students that are motivated and always willing to step out of their comfort zones.
-
-						Just give it a shot, CS Students go to hackathons all the time without knowing how to code and come out wanting to learn more and having a better understanding of what software development is.
-
-						It is not about winning, but rather what you can learn!
+				
+				<div class="card">
+					<div class="card-header" role="tab" id="headingTwo">
+						<h5 class="mb-0">
+							<a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+								Another Question that is Frequently Asked
+							</a>
+						</h5>
+					</div>
+					<div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+						<div class="card-body">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</div>
 					</div>
 				</div>
-			</div>
-			
-			<div class="card">
-				<div class="card-header" role="tab" id="headingThree">
-					<h5 class="mb-0">
-						<a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-							Will there be any prizes?
-						</a>
-					</h5>
-				</div>
-				<div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
-					<div class="card-body">
-						Yes, there will be prizes for 1st to 3rd place, although it isn’t all about winning but what you learn and build during those 24 hours. There will be a panel of judges that will rate which is the best hacks based on creativity, technical difficulty, design, and presentation. Prizes TBA.
+				
+				<div class="card">
+					<div class="card-header" role="tab" id="headingThree">
+						<h5 class="mb-0">
+							<a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+								A final Question that is Frequently Asked
+							</a>
+						</h5>
 					</div>
-				</div>
-			</div>
-
-			<div class="card">
-				<div class="card-header" role="tab" id="headingFour">
-					<h5 class="mb-0">
-						<a class="collapsed" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-							What should I bring?
-						</a>
-					</h5>
-				</div>
-				<div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour" data-parent="#accordion">
-					<div class="card-body">
-						Please bring a valid university ID a computer/laptop, chargers, power strip and any hardware you will use for your hack. You can also bring a sleeping bag, pillow, toiletries, and a couple changes of clothes, food will be provided at the event. No firearms, weapons, alcohol, or illegal drugs are allowed!
-					</div>
-				</div>
-			</div>
-
-			<div class="card">
-				<div class="card-header" role="tab" id="headingFive">
-					<h5 class="mb-0">
-						<a class="collapsed" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-							What are the size of the teams?
-						</a>
-					</h5>
-				</div>
-				<div id="collapseFive" class="collapse" role="tabpanel" aria-labelledby="headingFive" data-parent="#accordion">
-					<div class="card-body">
-						The teams are a maximum of 4 people. You can start off the event already with a team or you can meet with people at the event who also don’t have a team, don’t worry.
-					</div>
-				</div>
-			</div>
-
-			<div class="card">
-				<div class="card-header" role="tab" id="headingSix">
-					<h5 class="mb-0">
-						<a class="collapsed" data-toggle="collapse" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-							Got any questions or concerns?
-						</a>
-					</h5>
-				</div>
-				<div id="collapseSix" class="collapse" role="tabpanel" aria-labelledby="headingSix" data-parent="#accordion">
-					<div class="card-body">
-						Email us at csclubcsustan@gmail.com
+					<div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+						<div class="card-body">
+							You were expecting lorem ipsum text <br/><br/>But it was me, Dio!
+						</div>
 					</div>
 				</div>
 			</div>
@@ -185,23 +113,29 @@
 		<hr/>
 			
 		<div class="row">
-			<h3>Our Sponsors</h3>
+			<h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Our Sponsors</h3>
 		</div>
 		
 		<div class="row justify-content-center">
-			<a class="col-xs-4" href="https://github.com/Ssuarez0/CS-Club-Hackathon">
-				<img src="media\images\sponsors\placeholder.jpg" alt="placeholder text" width="120">
-			</a>
-			<a class="col-xs-4" href="https://github.com/Ssuarez0/CS-Club-Hackathon">
-				<img src="media\images\sponsors\placeholder.jpg" alt="placeholder text" width="120">
-			</a>
-			<a class="col-xs-4" href="https://github.com/Ssuarez0/CS-Club-Hackathon">
-				<img src="media\images\sponsors\placeholder.jpg" alt="placeholder text" width="120">
-			</a>
+			<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+				<a href="https://github.com/Ssuarez0/CS-Club-Hackathon">
+					<img src="media\images\sponsors\placeholder.jpg" alt="placeholder text" width="120">
+				</a>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-sm-12 col-sm-offset-1 col-md-3 col-md-offset-1 col-lg-3 offset-lg-1">
+				<a href="https://github.com/Ssuarez0/CS-Club-Hackathon">
+					<img src="media\images\sponsors\placeholder.jpg" alt="placeholder text" width="120">
+				</a>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-sm-12 col-sm-offset-1 col-md-3 col-md-offset-1 offset-lg-1">
+				<a href="https://github.com/Ssuarez0/CS-Club-Hackathon">
+					<img src="media\images\sponsors\placeholder.jpg" alt="placeholder text" width="120">
+				</a>
+			</div>
 		</div>
 		
 	</div>
 	<footer>
-		<p class="col-xs-4">Copyright &copy; 2017 CSU Stan CS Club
+		<p>Copyright &copy; 2017 CSU Stan CS Club</p>
 	</footer>
 </body>
