@@ -1,5 +1,5 @@
 <?php
-
+include 'info.php';
 //Line for the live server. Comment out if testing on local setup.
 
  if (($_SERVER['REQUEST_METHOD'] == 'POST')):
@@ -63,7 +63,6 @@
   );
 
 if(!formerrors):
-	include 'info.php';
 	$host = 'localhost';
 	$dbname = 'CSStanhack';
 	$forminfolink = mysqli_connect($host, $username, $password, $dbname);
@@ -75,7 +74,7 @@ if(!formerrors):
 	) 
 	VALUES (
 	  '".$myWarriorID."',
-	  '".$myEmail."'
+	  '".$myEmail."',
 	  '".$fname."',
 	  '".$lname."',
 	)";
@@ -86,6 +85,7 @@ if(!formerrors):
 	endif; //write to database
 	mysqli_close($forminfolink);
 	echo $form_msg;
+	exit();
 endif;
 endif;
 ?>
