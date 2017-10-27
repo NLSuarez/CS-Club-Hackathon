@@ -76,8 +76,9 @@ if(!formerrors):
 	VALUES (
 	  '".$fname."',
 	  '".$lname."',
-	  '".$myEmail."',
-	  '".$myWarriorID."'
+	  '".$myWarriorID."',
+	  '".myEmail."'
+	  
 	)";
 	if ($forminforesult = mysqli_query($forminfolink, $forminfoquery)):
 	  $form_msg = 'Thank you, ".$fname.," for registering for the hackathon!';
