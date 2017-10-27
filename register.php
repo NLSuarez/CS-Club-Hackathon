@@ -56,8 +56,6 @@ include 'info.php';
   
   //Only get here if all fields are correct
 
-
-echo "Past checks";
 	$forminfolink = mysqli_connect('localhost', $username, $password, 'CSStanhack');
 	if(mysqli_connect_errno())
 	{
