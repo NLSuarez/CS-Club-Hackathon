@@ -71,7 +71,7 @@ if(!formerrors):
 	  StudentID,
 	  Email,
 	  FirstName,
-	  LastName
+	  LastName,
 	) 
 	VALUES (
 	  '".$myWarriorID."',
@@ -79,8 +79,8 @@ if(!formerrors):
 	  '".$fname."',
 	  '".$lname."',
 	)";
-	if ($forminforesult = mysqli_query($dbname, $forminfoquery)):
-	  $form_msg = 'Thank you, ".$fname.," for registering for the hackathon!';
+	if ($forminforesult = mysqli_query($forminfolink, $forminfoquery)):
+	  $form_msg = 'Thank you, "'.$fname.'," for registering for the hackathon!';
 	else:
 	  $form_msg = "There was an error submission. Perhaps you already registered?";
 	endif; //write to database
