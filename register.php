@@ -29,14 +29,14 @@
 	
 	
 	//Filters
-	if(!filter_var($myEmail, FILTER_VALIDATE_EMAIL)) 
-        $err_msg = 'Please input a valid email address.';
+	if(!filter_var($myEmail, FILTER_VALIDATE_EMAIL)):
+        	$err_msg = 'Please input a valid email address.';
 		echo $err_msg;
 		exit();
-    endif;
-    if ( !(preg_match('/^00[\d]{7}$/', $myWarriorID)) ) :
-    	$err_msg = 'Sorry, you must input a valid Warrior ID.';
-    	echo $myWarriorID;
+    	endif;
+    	if ( !(preg_match('/^00[\d]{7}$/', $myWarriorID)) ) :
+    		$err_msg = 'Sorry, you must input a valid Warrior ID.';
+    		echo $myWarriorID;
 		echo $err_msg;
 		exit();
 	endif; // WarriorID doesn't match  
