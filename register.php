@@ -66,7 +66,7 @@ if(!formerrors):
 	include 'info.php';
 	$host = 'localhost';
 	$dbname = 'CSStanhack';
-	$forminfolink = mysqli_connect($host, $user, $password, $dbname);
+	$forminfolink = mysqli_connect($host, $username, $password, $dbname);
 	$forminfoquery = "INSERT INTO Participants (
 	  StudentID,
 	  Email,
