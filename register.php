@@ -87,5 +87,6 @@ if(!formerrors):
 	mysqli_close($forminfolink);
 	echo $form_msg;
 endif;
+endif;
 ?>
 
