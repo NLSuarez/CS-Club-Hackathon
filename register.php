@@ -9,41 +9,48 @@
 	if (isset($_POST['myEmail'])) { $myEmail = $_POST['myEmail']; } else { $myEmail = ''; }
 	
 	//Empty field checks
-	$form_msg = '';
+	$formerrors = false;
 	if ($myWarriorID === ''):
 		$err_msg = 'You must input a Warrior ID';
-		return $err_msg; 
+		echo $err_msg;
+		exit(); 
 		//requests should terminate immediately if someone enters something wrong
 	endif;
 	if ($myEmail === ''):
 		$err_msg = 'Please input an email';
-		return $err_msg;
+		echo $err_msg;
+		exit();
 	endif;
 	if ($fname === '' || $lname === '') :
 		$err_msg = 'Sorry, you must input your full name';
-		return $err_msg;
+		echo $err_msg;
+		exit();
 	endif;
 	
 	
 	//Filters
 	if(!filter_var($myEmail, FILTER_VALIDATE_EMAIL)) 
         $err_msg = 'Please input a valid email address.';
-		return $err_msg;
+		echo $err_msg;
+		exit();
     endif;
     if ( !(preg_match('/00[0-9]{9}/', $myWarriorID)) ) :
     	$err_msg = 'Sorry, you must input a valid Warrior ID.';
-		return $err_msg;
+		echo $err_msg;
+		exit();
 	endif; // WarriorID doesn't match  
 
     
 	if ( !(preg_match('/[A-Za-z]+/', $fname)) ) :
 		$err_msg = 'Error: Invalid input in First Name field.';
-		return $err_msg;
+		echo $err_msg;
+		exit();
 	endif; // pattern doesn't match
 
 	if ( !(preg_match('/[A-Za-z]+/', $lname)) ) :
 		$err_msg = 'Error: Invalid input in Last Name field.';
-		return $err_msg;
+		echo $err_msg;
+		exit();
 	endif; // pattern doesn't match
   
   //Only get here if all fields are correct
@@ -54,6 +61,7 @@
     'myWarriorID' => $myWarriorID,
   );
 
+if(!formerrors):
 	include 'info.php';
 	$host = 'localhost';
 	$dbname = 'CSStanhack';
@@ -76,6 +84,7 @@
 	  $form_msg = "There was an error submission. Perhaps you already registered?";
 	endif; //write to database
 	mysqli_close($forminfolink);
-	return $form_msg;
+	echo $form_msg;
+endif;
 ?>
 
