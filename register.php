@@ -34,9 +34,8 @@ include 'info.php';
 		echo $err_msg;
 		exit();
     	endif;
-    	if ( !(preg_match('/^00[\d]{7}$/', $myWarriorID)) ) :
-    		$err_msg = 'Sorry, you must input a valid Warrior ID.';
-    		echo $myWarriorID;
+    if ( !(preg_match('/^00[\d]{7}$/', $myWarriorID)) ) :
+    	$err_msg = 'Sorry, you must input a valid Warrior ID.';
 		echo $err_msg;
 		exit();
 	endif; // WarriorID doesn't match  
@@ -65,18 +64,21 @@ include 'info.php';
 	  StudentID,
 	  Email,
 	  FirstName,
-	  LastName,
+	  LastName
 	) 
 	VALUES (
 	  ".$myWarriorID.",
 	  '".$myEmail."',
 	  '".$fname."',
-	  '".$lname."',
+	  '".$lname."'
 	)";
 	if ($forminforesult = mysqli_query($forminfolink, $forminfoquery)):
 	  echo 'Thank you, "'.$fname.'," for registering for the hackathon!';
 	else:
-	  echo "There was an error submission. Perhaps you already registered?";
+	  	//Production
+	  	echo "There was an error in submission. Perhaps you already registered?";
+	  	//development
+	  	//echo "There was an error: " . mysqli_error($forminfolink);
 	endif; //write to database
 	mysqli_close($forminfolink);
 endif;
