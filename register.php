@@ -1,8 +1,9 @@
 <?php
 include 'info.php';
 //Line for the live server. Comment out if testing on local setup.
-
+echo "Reached page.";
  if (($_SERVER['REQUEST_METHOD'] == 'POST')):
+	echo "Inside condition 1.";
 	if (isset($_POST['myFirstName'])) { $fname = $_POST['myFirstName']; } else { $fname = ''; }
 	if (isset($_POST['myLastName'])) { $lname = $_POST['myLastName']; } else { $lname = ''; }
 	if (isset($_POST['myWarriorID'])) { $myWarriorID = $_POST['myWarriorID']; } else { $myWarriorID =''; }
@@ -57,7 +58,7 @@ include 'info.php';
   //Only get here if all fields are correct
 
 
-if(!formerrors):
+echo "Past checks";
 	$forminfolink = mysqli_connect('localhost', $username, $password, 'CSStanhack');
 	if(mysqli_connect_errno())
 	{
@@ -82,7 +83,7 @@ if(!formerrors):
 	endif; //write to database
 	mysqli_close($forminfolink);
 	
-endif;
+
 endif;
 ?>
 
