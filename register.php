@@ -68,17 +68,16 @@ if(!formerrors):
 	$dbname = 'CSStanhack';
 	$forminfolink = mysqli_connect($host, $user, $password, $dbname);
 	$forminfoquery = "INSERT INTO form_info (
-	  fname,
-	  lname,
-	  myWarriorID,
-	  myEmail
+	  StudentID,
+	  Email,
+	  FirstName,
+	  LastName
 	) 
 	VALUES (
-	  '".$fname."',
-	  '".$lname."',
 	  '".$myWarriorID."',
 	  '".$myEmail."'
-	  
+	  '".$fname."',
+	  '".$lname."',
 	)";
 	if ($forminforesult = mysqli_query($forminfolink, $forminfoquery)):
 	  $form_msg = 'Thank you, ".$fname.," for registering for the hackathon!';
