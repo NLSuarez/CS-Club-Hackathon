@@ -34,7 +34,7 @@
 		echo $err_msg;
 		exit();
     endif;
-    if ( !(preg_match('/00[0-9]{9}/', $myWarriorID)) ) :
+    if ( !(preg_match('/00[0-9]{7}/', $myWarriorID)) ) :
     	$err_msg = 'Sorry, you must input a valid Warrior ID.';
 		echo $err_msg;
 		exit();
