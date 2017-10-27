@@ -26,6 +26,10 @@ $(document).ready(function() {
 
 		request.done(function(response, textStatus, jqXHR){
 			//Code for success
+			var response_html = "<div id='feedback_info' class='row justify-content-center'><div class='alert alert-danger'><button class='close' data-dismiss='alert'>x</button> msg </div></div>";
+			response_html = response_html.replace("msg", response);
+			//if(response === )
+			$("#club_logo").before(response_html);
 		});
 
 		request.fail(function(jqXHR, textStatus, errorThrown){
