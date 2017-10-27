@@ -55,37 +55,33 @@ include 'info.php';
 	endif; // pattern doesn't match
   
   //Only get here if all fields are correct
-  $formdata = array (
-    'fname' => $fname,
-    'lname' => $lname,
-    'myEmail' => $myEmail,
-    'myWarriorID' => $myWarriorID,
-  );
+
 
 if(!formerrors):
-	$host = 'localhost';
-	$dbname = 'CSStanhack';
-	$forminfolink = mysqli_connect($host, $username, $password, $dbname);
-	$forminfoquery = "INSERT INTO 'Participants' (
+	$forminfolink = mysqli_connect('localhost', $username, $password, 'CSStanhack');
+	if(mysqli_connect_errno())
+	{
+		echo "Failed to connect to MySQL: " . mysqli_connect_error();
+	}
+	$forminfoquery = "INSERT INTO Participants (
 	  StudentID,
 	  Email,
 	  FirstName,
 	  LastName,
 	) 
 	VALUES (
-	  '".$myWarriorID."',
+	  ".$myWarriorID.",
 	  '".$myEmail."',
 	  '".$fname."',
 	  '".$lname."',
 	)";
 	if ($forminforesult = mysqli_query($forminfolink, $forminfoquery)):
-	  $form_msg = 'Thank you, "'.$fname.'," for registering for the hackathon!';
+	  echo 'Thank you, "'.$fname.'," for registering for the hackathon!';
 	else:
-	  $form_msg = "There was an error submission. Perhaps you already registered?";
+	  echo "There was an error submission. Perhaps you already registered?";
 	endif; //write to database
 	mysqli_close($forminfolink);
-	echo $form_msg;
-	exit();
+	
 endif;
 endif;
 ?>
