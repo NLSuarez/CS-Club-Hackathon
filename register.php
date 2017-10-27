@@ -2,7 +2,7 @@
 
 //Line for the live server. Comment out if testing on local setup.
 
- if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action']))):
+ if (($_SERVER['REQUEST_METHOD'] == 'POST')):
 	if (isset($_POST['myFirstName'])) { $fname = $_POST['myFirstName']; } else { $fname = ''; }
 	if (isset($_POST['myLastName'])) { $lname = $_POST['myLastName']; } else { $lname = ''; }
 	if (isset($_POST['myWarriorID'])) { $myWarriorID = $_POST['myWarriorID']; } else { $myWarriorID =''; }
