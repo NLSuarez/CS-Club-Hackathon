@@ -30,7 +30,7 @@
         $err_msg = 'Please input a valid email address.';
 		return $err_msg;
     endif;
-    if ( !(preg_match('00[0-9]{9}', $myWarriorID)) ) :
+    if ( !(preg_match('/00[0-9]{9}/', $myWarriorID)) ) :
     	$err_msg = 'Sorry, you must input a valid Warrior ID.';
 		return $err_msg;
 	endif; // WarriorID doesn't match  
