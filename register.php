@@ -41,13 +41,13 @@ include 'info.php';
 	endif; // WarriorID doesn't match  
 
     
-	if ( !(preg_match('/[A-Za-z]+/', $fname)) ) :
+	if ( !(preg_match('/^[A-Za-z]+$/', $fname)) ) :
 		$err_msg = 'Error: Invalid input in First Name field.';
 		echo $err_msg;
 		exit();
 	endif; // pattern doesn't match
 
-	if ( !(preg_match('/[A-Za-z]+/', $lname)) ) :
+	if ( !(preg_match('/^[A-Za-z]+$/', $lname)) ) :
 		$err_msg = 'Error: Invalid input in Last Name field.';
 		echo $err_msg;
 		exit();
