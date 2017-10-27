@@ -77,7 +77,7 @@ if(!formerrors):
 	  '".$fname."',
 	  '".$lname."',
 	  '".$myWarriorID."',
-	  '".myEmail."'
+	  '".$myEmail."'
 	  
 	)";
 	if ($forminforesult = mysqli_query($forminfolink, $forminfoquery)):
