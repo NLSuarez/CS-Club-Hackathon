@@ -1,7 +1,6 @@
 <?php
 
 //Line for the live server. Comment out if testing on local setup.
-include 'info.php';
 
  if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action']))):
 if (isset($_POST['fname'])) { $fname = $_POST['fname']; } else { $fname = ''; }
@@ -55,7 +54,7 @@ if (isset($_POST['ajaxrequest'])) { $ajaxrequest = $_POST['ajaxrequest']; } else
   );
 
 	if (!($formerrors)) :
-		include("log_formdb.php");
+		include 'info.php';
 		$forminfolink = mysqli_connect($host, $user, $password, $dbname);
 		$forminfoquery = "INSERT INTO form_info (
 		  fname,
