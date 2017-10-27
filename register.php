@@ -1,9 +1,8 @@
 <?php
 include 'info.php';
 //Line for the live server. Comment out if testing on local setup.
-echo "Reached page.";
+
  if (($_SERVER['REQUEST_METHOD'] == 'POST')):
-	echo "Inside condition 1.";
 	if (isset($_POST['myFirstName'])) { $fname = $_POST['myFirstName']; } else { $fname = ''; }
 	if (isset($_POST['myLastName'])) { $lname = $_POST['myLastName']; } else { $lname = ''; }
 	if (isset($_POST['myWarriorID'])) { $myWarriorID = $_POST['myWarriorID']; } else { $myWarriorID =''; }
@@ -82,8 +81,6 @@ echo "Past checks";
 	  echo "There was an error submission. Perhaps you already registered?";
 	endif; //write to database
 	mysqli_close($forminfolink);
-	
-
 endif;
 ?>
 
