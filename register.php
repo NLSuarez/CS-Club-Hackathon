@@ -55,6 +55,8 @@
   );
 
 	include 'info.php';
+	$host = 'localhost';
+	$dbname = 'CSStanhack';
 	$forminfolink = mysqli_connect($host, $user, $password, $dbname);
 	$forminfoquery = "INSERT INTO form_info (
 	  fname,
