@@ -13,7 +13,7 @@
 </head>
 <body>
 	<div class="container" id="main-content">
-		<div id="club_logo" class="row justify-content-center">
+		<div class="row justify-content-center">
 			<img src="media\images\logo_sizes\ms-icon-310x310.png" class="img-responsive">
 		</div>
 		
@@ -33,7 +33,7 @@
 					</p>
 				</div>
 			</div>
-			<div class="col-xs-12">
+			<div id="form_container" class="col-xs-12">
 				<a class="btn btn-primary" data-toggle="collapse" href="#register" aria-expanded="false" aria-controls="register">
 					Register
 				</a>
@@ -41,11 +41,11 @@
 					<form class="form-horizontal" action="./register.php" method="POST" id="registration-form">
 						<div class="form-group">
 							<label for="myWarriorID">Warrior ID</label>
-							<input type="text" name="myWarriorID" id="myWarriorID" class="form-control" placeholder="Enter Warrior ID">
+							<input type="text" name="myWarriorID" id="myWarriorID" class="form-control" placeholder="Enter Warrior ID" required>
 						</div>
 						<div class="form-group">
 						   <label for="myEmail">Email address</label>
-						   <input type="email" class="form-control" id="myEmail" name="myEmail" placeholder="Enter email">
+						   <input type="email" class="form-control" id="myEmail" name="myEmail" placeholder="Enter email" required>
 						   <!--
 							Something to potentially add later. Will require this attribute in the input to appear properly: aria-describedby="emailHelp"
 						   <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
@@ -53,14 +53,14 @@
 						</div>
 						<div class="form-group">
 							<label for="myFirstName">First Name</label>
-							<input type="text" name="myFirstName" id="myFirstName" class="form-control" placeholder="Enter your first name">
+							<input type="text" name="myFirstName" id="myFirstName" class="form-control" placeholder="Enter your first name" required>
 						</div>
 						<div class="form-group">
 							<label for="myLastName">Last Name</label>
-							<input type="text" name="myLastName" id="myLastName" class="form-control" placeholder="Enter your last name">
+							<input type="text" name="myLastName" id="myLastName" class="form-control" placeholder="Enter your last name" required>
 						</div>
 						<div class="form-group">
-							<input class="btn btn-primary" type="submit"/>
+							<input class="btn btn-primary" type="submit" value="Submit Registration"/>
 						</div>
 					</form>
 			  </div>

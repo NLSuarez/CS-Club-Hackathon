@@ -10,6 +10,8 @@ $(document).ready(function() {
 			request.abort();
 		}
 
+		$('#feedback_info').remove();
+
 		var $form = $(this);
 
 		var $inputs = $form.find("input, select, button, textarea");
@@ -27,9 +29,12 @@ $(document).ready(function() {
 		request.done(function(response, textStatus, jqXHR){
 			//Code for success
 			var response_html = "<div id='feedback_info' class='row justify-content-center'><div class='alert alert-danger'><button class='close' data-dismiss='alert'>x</button> msg </div></div>";
+			if(response.startsWith("Thank you,")){
+				response_html = response_html.replace("alert-danger", "alert-success");
+				$('#register').collapse('toggle');
+			}
 			response_html = response_html.replace("msg", response);
-			//if(response === )
-			$("#club_logo").before(response_html);
+			$("#form_container").before(response_html);
 		});
 
 		request.fail(function(jqXHR, textStatus, errorThrown){

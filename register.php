@@ -73,7 +73,7 @@ include 'info.php';
 	  '".$lname."'
 	)";
 	if ($forminforesult = mysqli_query($forminfolink, $forminfoquery)):
-	  echo 'Thank you, "'.$fname.'," for registering for the hackathon!';
+	  echo 'Thank you, "'.$fname.' '.$lname.'," for registering for the hackathon!';
 	else:
 	  	//Production
 	  	echo "There was an error in submission. Perhaps you already registered?";
