@@ -1,4 +1,12 @@
 $(document).ready(function() {
+	//Logo animation
+	$('#club-logo').hide();
+	$('#club-logo').animate({
+			opacity: "toggle",
+			height: "toggle"
+		}, 1500);
+
+	//Form submission
 	var request;
 
 	$('#registration-form').submit(function(event){
